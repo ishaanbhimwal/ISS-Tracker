@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="data/img/favicon.ico" rel="icon" type="image/x-icon" />
+  <title>ISS-Tracker by Team Bhimwal</title>
+  <link rel="stylesheet" href="data/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1>
+        <a href="index.html" id="h-home">ISS-Tracker by Team Bhimwal</a>
+      </h1>
+    </header>
+    <div>
+      Welcome to International Space Station (ISS) tracker. This project
+      tracks ISS in real-time along with displaying other details such as
+      time, latitude, longitude etc. We built this web app using JavaScript,
+      <a href="https://leafletjs.com/">Leaflet</a> JavaScript library and
+      <a href="https://wheretheiss.at/">WTIA</a>
+      REST API.
+    </div>
+    <br />
+    <div>
+      We use Leaflet JS map inside of which we draw a marker. ISS image is our
+      marker. Then every 2 seconds, we perform a GET request to the
+      api.wheretheiss.at, which in turn returns all the information like
+      current latitude, longitude, timezone, speed, altitude, and visibility
+      of ISS. Then we update the position of the marker (ISS image) on the map
+      and all the details according to the information we get.
+    </div>
+    <br />
+    <div>
+      Check out
+      <a href="https://www.nasa.gov/mission_pages/station/main/index.html">NASA's website</a>
+      to find out more about ISS!
+    </div>
+    <br />
+    <div id="wrapper">
+      <div id="map-div"></div>
+      <div id="details">
+        <div>
+          Time:
+          <span class="time"></span>
+        </div>
+        <div>
+          Latitude:
+          <span class="latitude"></span>
+        </div>
+        <div>
+          Longitude:
+          <span class="longitude"></span>
+        </div>
+        <div>
+          Speed:
+          <span class="speed"></span>
+        </div>
+        <div>
+          Altitude:
+          <span class="altitude"></span>
+        </div>
+        <div>
+          Visibility:
+          <span class="visibility"></span>
+        </div>
+      </div>
+    </div>
+    <br />
+    <footer>
+      <div>
+        This project is made for
+        <a href="https://aimapp2.aim.gov.in/atlspace/">ATL Space Challenge 2021</a>
+        by Team Bhimwal of APS Pune under
+        <a href="https://aimapp2.aim.gov.in/atlspace/#challenge">Explore Space</a>
+        Theme.
+      </div>
+      <br />
+      <div>
+        <i class="fas fa-copyright"></i>
+        2021 Team Bhimwal
+      </div>
+      <br />
+      <div id="f-links">
+        <a href="https://github.com/ishaanbhimwal/ISS-Tracker"><i class="fab fa-github"></i>
+          GitHub
+        </a>
+        <a href="https://www.youtube.com/watch?v=gdESdc_hnq4"><i class="fab fa-youtube"></i>
+          YouTube
+        </a>
+        <a href="data/ISS-Tracker.pdf" download="ISS-Tracker"><i class="fas fa-file-pdf"></i> Project Synopsis</a>
+      </div>
+    </footer>
+  </div>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
+  <script src="data/js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

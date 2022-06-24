@@ -1,0 +1,74 @@
+body {
+  max-width: 80%;
+  background-image: url(../img/space.jpeg);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  text-align: center;
+  color: white;
+  margin: auto;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+#h-home {
+  color: white;
+  text-decoration: none;
+}
+
+#wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#map-div {
+  height: 400px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+#details {
+  background-color: darkblue;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-size: 13px;
+  box-sizing: border-box;
+  color: yellow;
+}
+
+#details div {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+span {
+  font-size: 16px;
+  padding: 10px;
+  color: yellow;
+  font-weight: bold;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+}
+
+a {
+  color: white;
+}
+
+#f-links {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 16px;
+  color: white;
+}
+
+div#f-links a {
+  text-decoration: none;
+}
